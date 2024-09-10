@@ -1,8 +1,6 @@
 import os
 from crewai import Agent
 from tools import search_tool
-from dotenv import load_dotenv
-load_dotenv()
 from langchain_google_genai import ChatGoogleGenerativeAI
  
 # Creating LLM Variable
