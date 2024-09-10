@@ -6,7 +6,7 @@ from tasks import reseacher_task,writer_task
 
 # Creating Web Page header
 # st.header("Welcome to Revolutionary Workflows with AI Agents The Future is Now")
-st.subheader("Your AI Agents for Linkedin Blog Post...")
+st.subheader("Multi AI Agent LinkedIn Blog Generator...")
 
 # Getting Task From Web
 post_content = st.text_area("What Linkedin Blog Post Would you Like me to come up with Today?")
