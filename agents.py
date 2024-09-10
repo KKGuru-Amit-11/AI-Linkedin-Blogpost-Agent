@@ -6,6 +6,7 @@ load_dotenv()
 from langchain_google_genai import ChatGoogleGenerativeAI
  
 # Creating LLM Variable
+os.environ['GOOGLE_API_KEY']='AIzaSyD5ggkVEWVzFE3NaFa73a0MHuJPmkT3U8M'
 LLM_Model=ChatGoogleGenerativeAI(model='gemini-1.5-flash',
                                  google_api_key=os.getenv('GOOGLE_API_KEY'))
 
