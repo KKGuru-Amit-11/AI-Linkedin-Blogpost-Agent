@@ -5,11 +5,15 @@ from agents import web_reseacher,blog_writer,LLM_Model
 from tasks import reseacher_task,writer_task
 
 # Creating Web Page header
-# st.header("Welcome to Revolutionary Workflows with AI Agents The Future is Now")
-st.subheader("Multi AI Agent LinkedIn Blog Generator...")
+st.subheader("**Multi AI Agent LinkedIn Blog Generator...**")
 
 # Getting Task From Web
-post_content = st.text_area("What Linkedin Blog Post Would you Like me to come up with Today?")
+with st.form(key='Query',clear_on_submit=True):
+    post_content=st.text_input(label='**What Linkedin Blog Post Would you Like me to come up with Today?**')
+    submit_button = st.form_submit_button('Submit.')
+    if submit_button:
+        st.info('Input Details...')
+        st.markdown(f'Blog Post Name: {post_content} ...')
 
 # Creating Crew
 crew = Crew(
@@ -27,7 +31,7 @@ inputs={'input':post_content}
 if st.button("Generate"):
     with st.spinner("Generate Response..."):
         res=crew.kickoff(inputs=inputs)
-        res1=str(res)
-        st.subheader("Here is a Response..")
+        result=str(res)
+        st.info("Here is a Response..")
         st.markdown(res)
-        st.download_button(label='Download Text File',file_name=f'{post_content} blogpost.txt',data=res1)
+        st.download_button(label='Download Text File',file_name=f'{post_content} blogpost.txt',data=result)
