@@ -1,8 +1,9 @@
 import os
 from crewai import Agent
 from tools import search_tool
-from langchain_google_genai import ChatGoogleGenerativeAI
- 
+# from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
+
 # # Creating LLM Variable
 # os.environ['GOOGLE_API_KEY']='AIzaSyD5ggkVEWVzFE3NaFa73a0MHuJPmkT3U8M'
 # LLM_Model=ChatGoogleGenerativeAI(model='gemini-1.5-flash',
