@@ -3,10 +3,13 @@ from crewai import Agent
 from tools import search_tool
 from langchain_google_genai import ChatGoogleGenerativeAI
  
-# Creating LLM Variable
-os.environ['GOOGLE_API_KEY']='AIzaSyD5ggkVEWVzFE3NaFa73a0MHuJPmkT3U8M'
-LLM_Model=ChatGoogleGenerativeAI(model='gemini-1.5-flash',
-                                 google_api_key=os.getenv('GOOGLE_API_KEY'))
+# # Creating LLM Variable
+# os.environ['GOOGLE_API_KEY']='AIzaSyD5ggkVEWVzFE3NaFa73a0MHuJPmkT3U8M'
+# LLM_Model=ChatGoogleGenerativeAI(model='gemini-1.5-flash',
+#                                  google_api_key=os.getenv('GOOGLE_API_KEY'))
+
+os.environ['GROQ_API_KEY']='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'
+LLM_Model= ChatGroq(model='llama3-70b-8192',api_key=os.getenv('GROQ_API_KEY'))
 
 # print(LLM_Model)
 # Creating a blog_researcher Agent
