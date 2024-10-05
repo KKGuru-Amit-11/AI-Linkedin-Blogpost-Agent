@@ -9,7 +9,7 @@ from langchain_groq import ChatGroq
 # LLM_Model=ChatGoogleGenerativeAI(model='gemini-1.5-flash',
 #                                  google_api_key=os.getenv('GOOGLE_API_KEY'))
 
-os.environ['GROQ_API_KEY']='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'
+os.environ['GROQ_API_KEY']='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'
 LLM_Model= ChatGroq(model='llama3-70b-8192',api_key=os.getenv('GROQ_API_KEY'))
 
 # print(LLM_Model)
